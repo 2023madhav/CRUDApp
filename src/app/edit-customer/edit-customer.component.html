@@ -1,0 +1,88 @@
+<div class="container my-5">
+  <h2 class="mb-3">Update Customer</h2>
+  <div class="row">
+     <div class="col-12">
+      <form #form="ngForm" (ngSubmit)="updateCustomer()">
+
+        <div class="row">
+          <div class="col-6">
+          <div class="mb-3">
+            <label for="customerId" class="form-label">Customer ID</label>
+            <input type="text" class="form-control" id="customerId" readonly="true"
+            name="customerId" [(ngModel)]="addcustomerresponse.id">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstname"
+            name="firstname" [(ngModel)]="addcustomerresponse.firstname">
+          </div>
+        </div>
+      </div>
+
+
+        <div class="row">
+
+          <div class="col-6">
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastname"
+            name="lastname" [(ngModel)]="addcustomerresponse.lastname">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email"
+            name="email" [(ngModel)]="addcustomerresponse.email">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-6">
+        <div class="mb-3">
+          <label for="phone_Number" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phone_Number"
+          name="phone_Number" [(ngModel)]="addcustomerresponse.phone_Number">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="country_code" class="form-label">Country Code</label>
+          <input type="text" class="form-control" id="country_code"
+          name="country_code" [(ngModel)]="addcustomerresponse.country_code">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-6">
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <input type="text" class="form-control" id="gender"
+        name="gender" [(ngModel)]="addcustomerresponse.gender">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="Balance" class="form-label">Balance</label>
+        <input type="number" class="form-control" id="Balance"
+        name="balance" [(ngModel)]="addcustomerresponse.balance">
+      </div>
+    </div>
+  </div>
+<div class="col-6">
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</div>
+      </form>
+     </div>
+  </div>
+
+</div>

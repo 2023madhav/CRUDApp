@@ -1,0 +1,34 @@
+<div class="container my-5">
+  <h2 class="mb-3">Customer List</h2>
+  <table class="table table-striped" *ngIf="customers && customers.length>0">
+   <thead>
+    <tr>
+      <th>Customer ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Country Coe</th>
+      <th>Gender</th>
+      <th>Balance</th>
+      <th></th>
+      <th></th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr *ngFor="let cust of customers">
+      <td>{{cust.id}}</td>
+      <td>{{cust.firstname}}</td>
+      <td>{{cust.lastname}}</td>
+      <td>{{cust.email}}</td>
+      <td>{{cust.phone_Number}}</td>
+      <td>{{cust.country_code}}</td>
+      <td>{{cust.gender}}</td>
+      <td>{{cust.balance}}</td>
+      <td><button type="button" class="btn btn-success" [routerLink]="['/customer','edit',cust.id]">Edit</button></td>
+      <td><button type="button" class="btn btn-danger" (click)="deletecustomer(cust.id)">Delete</button></td>
+    </tr>
+   </tbody>
+  </table>
+  <p *ngIf="!customers || customers.length<=0">No Employee Found</p>
+</div>
